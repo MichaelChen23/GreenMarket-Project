@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>green-market</title>
+    <link rel="stylesheet" href="weui.css"/>
+    <link rel="stylesheet" href="green-market.css"/>
+</head>
+<body ontouchstart>
+    <!-- home index page -->
+    <div class="container green_container">
+
+    </div>
+    <!-- login page -->
+    <script type="text/html" id="gm_login">
+        <div class="page">
+            <div class="hd">
+                <h1 class="page_title">Green Market</h1>
+            <p class="page_desc">生鲜市场</p>
+        </div>
+        <div class="weui_cells weui_cells_form">
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">账号</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="number" pattern="[0-9]{11}" placeholder="请输入手机号"/>
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">密码</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="text" pattern="[A-Za-z0-9]{6,}" placeholder="请输入6位以上的数字或字母"/>
+                </div>
+            </div>
+        </div>
+        <div class="weui_btn_area">
+            <a class="weui_btn weui_btn_primary" href="javascript:" id="showLoginTips">登录</a>
+        </div>
+        <div class="weui_toptips weui_warn js_logintips">格式不对</div>
+    </script>
+    <!-- js lib -->
+    <script src="zepto.min.js"></script>
+    <script src="green-market.js"></script>
+</body>
+</html>
