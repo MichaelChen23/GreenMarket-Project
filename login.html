@@ -23,20 +23,36 @@
             <div class="weui_cell">
                 <div class="weui_cell_hd"><label class="weui_label">账号</label></div>
                 <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" type="number" pattern="[0-9]{11}" placeholder="请输入手机号"/>
+                    <input name="account" id="account" class="weui_input" type="telephone" pattern="[0-9]{11}" maxlength="11" placeholder="请输入手机号"/>
                 </div>
             </div>
             <div class="weui_cell">
                 <div class="weui_cell_hd"><label class="weui_label">密码</label></div>
                 <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" type="text" pattern="[A-Za-z0-9]{6,}" placeholder="请输入6位以上的数字或字母"/>
+                    <input name="password" id="password" class="weui_input" type="password" pattern="[A-Za-z0-9]{6,}" placeholder="请输入6位以上数字或字母"/>
                 </div>
             </div>
         </div>
         <div class="weui_btn_area">
             <a class="weui_btn weui_btn_primary" href="javascript:" id="showLoginTips">登录</a>
         </div>
-        <div class="weui_toptips weui_warn js_logintips">格式不对</div>
+
+        <!--BEGIN toast-->
+        <div id="phone_warm_toast" style="display: none;">
+            <div class="weui_mask_transparent"></div>
+            <div class="weui_toast">
+                <i class="weui_icon_warn"></i>
+                <p class="weui_toast_content">请输入正确的手机号码！</p>
+            </div>
+        </div>
+        <div id="password_warm_toast" style="display: none;">
+            <div class="weui_mask_transparent"></div>
+            <div class="weui_toast">
+                <i class="weui_icon_warn"></i>
+                <p class="weui_toast_content">请输入6位以上数字或字母的密码！</p>
+            </div>
+        </div>
+        <!--end toast-->
     </script>
     <!-- js lib -->
     <script src="zepto.min.js"></script>
