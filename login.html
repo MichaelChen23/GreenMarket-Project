@@ -37,8 +37,8 @@
             <a class="weui_btn weui_btn_primary" href="javascript:" id="showLoginTips">登录</a>
         </div>
         <div class="weui_extra_area">
-            <a href="" class="weui_extra_left">注册</a>            
-            <a href="" class="weui_extra_right">忘记密码</a>
+            <a href="javascript:;" class="weui_extra_left js_goto" data-id="register">注册</a>            
+            <a href="javascript:;" class="weui_extra_right js_goto" data-id="resetpwd">忘记密码</a>
         </div>
 
         <!--BEGIN toast-->
@@ -57,6 +57,22 @@
             </div>
         </div>
         <!--end toast-->
+    </script>
+    <!-- register page -->
+    <script type="text/html" id="gm_register">
+        <div class="page">
+            <div class="hd">
+                <h1 class="page_title">注册</h1>
+            <p class="page_desc">注册新用户</p>
+        </div>
+    </script>
+    <!-- resetpwd page -->
+    <script type="text/html" id="gm_resetpwd">
+        <div class="page">
+            <div class="hd">
+                <h1 class="page_title">重设密码</h1>
+            <p class="page_desc">修改密码</p>
+        </div>
     </script>
     <!-- js lib -->
     <script src="zepto.min.js"></script>

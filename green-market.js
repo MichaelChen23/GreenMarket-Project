@@ -150,6 +150,12 @@ $(function () {
                         return;
                     }
                 }
+            },
+            '.js_goto': {
+                click: function (e) {
+                    var id = $(this).data('id');
+                    pageManager.go(id);
+                }
             }
         }
     };
@@ -157,10 +163,26 @@ $(function () {
     <!-- trim功能，去掉首尾空格 -->
     function trimStr(str) {
         return str.replace(/(^\s*)|(\s*$)/g,"");
-    }
+    };
+
+    var register = {
+        name: 'register',
+        url: '#register',
+        template: '#gm_register',
+        events: {}
+    };
+
+    var resetpwd = {
+        name: 'resetpwd',
+        url: '#resetpwd',
+        template: '#gm_resetpwd',
+        events: {}
+    };
 
     pageManager
         .push(login)
+        .push(register)
+        .push(resetpwd)
         .default('login')
         .init();
 });
